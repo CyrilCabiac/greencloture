@@ -1,0 +1,1446 @@
+/*custom font*/
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+ .configurateur{
+	 background: #1e1e1e;
+	 padding-left:0 !important;
+	 padding-right: 0 !important;
+}
+ h1,h2,h3{
+	 font-family: Poppins;
+	 line-height: 1em !important 
+}
+ label {
+	 font-size: 17px;
+	 line-height: 1em;
+}
+
+select,input{
+	outline: none !important
+}
+/*form styles*/
+ #msform {
+	 text-align: center;
+	 position: relative;
+	 margin-top: 30px;
+}
+fieldset {
+	 background: white;
+	 border: 0 none;
+	 border-radius: 0px;
+	 box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	 padding: 20px 30px;
+	 box-sizing: border-box;
+	 width: 100%;
+	 margin: 0;
+	 min-height:100%;
+	/*stacking fieldsets above each other*/
+	 position: relative;
+}
+/*Hide all except first fieldset*/
+ #msform fieldset:not(:first-of-type) {
+	 display: none;
+}
+ #msform input, #msform textarea {
+	 border: 1px solid #ccc;
+	 border-radius: 0px;
+	 margin-bottom: 0px;
+	 width: 100%;
+	 box-sizing: border-box;
+	 font-family: Poppins;
+	 color: #2C3E50;
+	 font-size: 13px;
+}
+
+.spacer-v80mobile{
+	display:none
+}
+
+
+input.next.action-button.debuter {
+    margin-top: -30px !important;
+}
+
+
+ .spacer-v{
+	 height:40px 
+}
+ .spacer-v50{
+	 height:50px 
+}
+ .spacer-v80{
+	 height:80px 
+}
+
+ .logo_wrapper{
+	 background: white;
+	 min-width: 60%;
+	 max-width: 100%;
+	 margin-left: auto;
+	 margin-right: auto;
+	 -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	 animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ h1.titre{
+	 color:white;
+	 font-weight: 700;
+	 font-size:55px;
+	 letter-spacing: -1px;
+}
+ h1.titre > span{
+	 color:white 
+}
+ fieldset p {
+	 font-size: 12px;
+	 font-family: Poppins;
+	 margin-bottom: 0 !important;
+	 line-height: 1.3em;
+}
+ input.next.action-button.debuter{
+	 width:300px !important;
+	 position: relative;
+	 z-index:2 
+}
+ #msform input:focus, #msform textarea:focus {
+	 -moz-box-shadow: none !important;
+	 -webkit-box-shadow: none !important;
+	 box-shadow: none !important;
+	 border: 1px solid #64993E;
+	 outline-width: 0;
+	 transition: All 0.5s ease-in;
+	 -webkit-transition: All 0.5s ease-in;
+	 -moz-transition: All 0.5s ease-in;
+	 -o-transition: All 0.5s ease-in;
+}
+/*buttons*/
+ #msform .action-button {
+	 width: 150px;
+	 background: #64993E;
+	 font-weight: bold;
+	 color: white;
+	 border: 0 none;
+	 border-radius: 25px;
+	 cursor: pointer;
+	 padding: 10px 5px;
+	 margin: 10px 5px;
+	 transition:all ease-in 0.4s;
+	 z-index: 30;
+	 position: relative;
+	 -webkit-box-shadow: -3px 1px 17px 0px rgba(0,0,0,0.53);
+	 -moz-box-shadow: -3px 1px 17px 0px rgba(0,0,0,0.53);
+	 box-shadow: -3px 1px 17px 0px rgba(0,0,0,0.53);
+}
+ #msform .action-button:hover, #msform .action-button:focus {
+	 box-shadow: 0 0 0 2px white, 0 0 0 3px #64993E;
+}
+ #msform .action-button-previous {
+	 width: 100px;
+	 background: #264653;
+	 font-weight: bold;
+	 color: white;
+	 border: 0 none;
+	 border-radius: 25px;
+	 cursor: pointer;
+	 padding: 10px 5px;
+	 margin: 10px 5px;
+	 z-index: 30;
+	 position: relative;
+}
+ #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+	 box-shadow: 0 0 0 2px white, 0 0 0 3px #264653;
+}
+/*headings*/
+ .fs-title {
+	 font-size: 25px;
+	 color: #2C3E50;
+	 margin-bottom: 10px;
+	 letter-spacing: -1px;
+	 font-weight: 700;
+}
+ .fs-subtitle {
+	 font-weight: normal;
+	 font-size: 13px;
+	 color: #666;
+	 margin-bottom: 20px;
+}
+/*progressbar*/
+ #progressbar {
+	 margin-bottom: 0px;
+	 overflow: hidden;
+	/*CSS counters to number the steps*/
+	 counter-reset: step;
+}
+ #progressbar li {
+	 list-style-type: none;
+	 color: white;
+	 text-transform: uppercase;
+	 font-size: 9px;
+	 width: 12.50%;
+	 float: left;
+	 position: relative;
+	 letter-spacing: 1px;
+}
+ #progressbar li:before {
+	 content: counter(step);
+	 counter-increment: step;
+	 width: 24px;
+	 height: 24px;
+	 line-height: 26px;
+	 display: block;
+	 font-size: 12px;
+	 color: #333;
+	 background: white;
+	 border-radius: 25px;
+	 margin: 0 auto 10px auto;
+}
+/*progressbar connectors*/
+ #progressbar li:after {
+	 content: '';
+	 width: 100%;
+	 height: 5px;
+	 background: white;
+	 position: absolute;
+	 left: -46%;
+	 top: 9px;
+	 z-index: -1;
+	/*put it behind the numbers*/
+}
+ #progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	 content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+ #progressbar li.active:before, #progressbar li.active:after {
+	 background: #64993E;
+	 color: white;
+}
+/* The switch - the box around the slider */
+ .switch {
+	 position: relative;
+	 display: inline-block;
+	 width: 60px;
+	 height: 34px;
+}
+/* Hide default HTML checkbox */
+ .switch input {
+	 opacity: 0;
+	 width: 0;
+	 height: 0;
+}
+/* The slider */
+ .slider {
+	 position: absolute;
+	 cursor: pointer;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: #ccc;
+	 -webkit-transition: .4s;
+	 transition: .4s;
+}
+ .slider:before {
+	 position: absolute;
+	 content: "";
+	 height: 26px;
+	 width: 26px;
+	 left: 4px;
+	 bottom: 4px;
+	 background-color: white;
+	 -webkit-transition: .4s;
+	 transition: .4s;
+}
+ input:checked + .slider {
+	 background-color: #64993E;
+}
+ input:focus + .slider {
+	 box-shadow: 0 0 1px #64993E;
+}
+ input:checked + .slider:before {
+	 -webkit-transform: translateX(26px);
+	 -ms-transform: translateX(26px);
+	 transform: translateX(26px);
+}
+/* Rounded sliders */
+ .slider.round {
+	 border-radius: 34px;
+}
+ .slider.round:before {
+	 border-radius: 50%;
+}
+/*Tableau recap*/
+ .tg{
+	 border-collapse:collapse;
+	 border-spacing:0;
+	 background:white;
+	 border-color: black;
+}
+ .tg td{
+	 font-family:Poppins, sans-serif;
+	 font-size:14px;
+	 padding:10px 14px;
+	 border-style:solid;
+	 border-width:1px;
+	 overflow:hidden;
+	 word-break:normal;
+	 border-color:black;
+}
+ .tg th{
+	 font-family:Poppins, sans-serif;
+	 font-size:14px;
+	 font-weight:normal;
+	 padding:10px 14px;
+	 border-style:solid;
+	 border-width:1px;
+	 overflow:hidden;
+	 word-break:normal;
+	 border-color:black;
+}
+ .tg .tg-9wq8{
+	 border-color:inherit;
+	 text-align:center;
+	 vertical-align:middle;
+	 border-color: black;
+}
+ .prix{
+	 font-variant: 700 
+}
+ .tg .tg-roi2{
+	 background-color:#64993E;
+	 border-color:inherit;
+	 text-align:center;
+	 vertical-align:middle;
+	 color:white;
+	 font-weight: 700;
+}
+ tr.ligne {
+	 height: 50px;
+}
+ .le_total{
+	 background:#64993E;
+	 color:white;
+	 font-weight:700 
+}
+ .designation{
+	 font-weight: 700 
+}
+ .recap_actions{
+	 border: 1px solid white;
+	 background:white;
+	 color:#64993E;
+	 padding:30px 
+}
+ .ral6005,.ral7016,.ral9005{
+	 height: 90px;
+	 font-size: 1.1em;
+	 font-weight: 700;
+	 letter-spacing: -1px;
+	 color: white !important;
+	 border-color: white;
+	 transition:0.4s;
+	 white-space: normal;
+	 word-wrap: break-word;
+}
+ .ral6005:focus,.ral7016:focus,.ral9005:focus{
+	 outline: none;
+	 border:3px solid #64993e;
+}
+ .ral6005,.ral6005:focus{
+	 background: #114232;
+}
+ .ral6005:hover{
+	 background: #114232 
+}
+ .ral7016,.ral7016:focus{
+	 background: #383e42;
+	 border-top-left-radius:30px !important;
+	 border-bottom-left-radius:30px !important 
+}
+ .ral7016:hover{
+	 background: #383e42 
+}
+ .ral9005,.ral9005:focus{
+	 background: #2c2c2c;
+	 border-top-right-radius:30px !important;
+	 border-bottom-right-radius:30px !important 
+}
+ .ral9005:hover{
+	 background: #2c2c2c 
+}
+ .recap_actions p{
+	 text-align: left;
+	 margin-bottom:20px 
+}
+ .spec{
+	 color:black;
+	 margin-bottom: 15px;
+}
+ span.result {
+	 margin-left: 10px;
+	 background: #64993E;
+	 padding: 5px 10px;
+	 color: white;
+	 border-radius: 3px;
+	 font-weight: 700;
+}
+ a.action_configurateur{
+	 padding:10px 24px;
+	 background:#64993E;
+	 border:1px solid #64993E;
+	 border-radius: 40px;
+	 text-transform: uppercase;
+	 margin:10px;
+	 transition: ease-in 0.4s;
+	 text-decoration: none;
+	 color:white;
+	 margin-bottom: 20px;
+	 font-size: 11px;
+}
+ a.action_configurateur:hover{
+	 background:#64993E;
+	 color:white;
+	 text-decoration: none;
+}
+ @media (min-width: 768px){
+	 .modal-dialog {
+		 width: 100%;
+		 margin-top: 130px;
+	}
+}
+ .formulaire input {
+	 border-color: #64993E !important;
+	 border-radius: 30px !important;
+	 margin-bottom: 20px !important;
+	 text-align: center;
+	 font-size: 13px !important;
+	 font-weight: 700;
+	 width: 100%;
+}
+ .formulaire input:focus{
+	 border-width: 2px !important 
+}
+ .btn-primary {
+	 color: #fff;
+	 background-color: #64993E;
+	 border-color: #64993E;
+	 transition: 0.4s 
+}
+ .btn-primary:hover{
+	 color: #fff;
+	 background-color: #264653;
+	 border-color: #264653;
+}
+ @-webkit-keyframes slide-in-top {
+	 0% {
+		 -webkit-transform: translateY(-1000px);
+		 transform: translateY(-1000px);
+		 opacity: 0;
+	}
+	 100% {
+		 -webkit-transform: translateY(0);
+		 transform: translateY(0);
+		 opacity: 1;
+	}
+}
+ @keyframes slide-in-top {
+	 0% {
+		 -webkit-transform: translateY(-1000px);
+		 transform: translateY(-1000px);
+		 opacity: 0;
+	}
+	 100% {
+		 -webkit-transform: translateY(0);
+		 transform: translateY(0);
+		 opacity: 1;
+	}
+}
+/*--------------------------------- ----------------------------------*/
+ li {
+	 list-style: none;
+}
+ .select_wrapper {
+	 background: white;
+	 line-height: 36px;
+	 border-radius: 3px;
+	 cursor: pointer;
+	 position: relative;
+}
+ .select_wrapper:hover {
+	 background: white;
+}
+ .select_wrapper span {
+	 display: block;
+	 margin: 0;
+	 color: #64993E;
+	 font-weight: 700;
+	 font-size: 20px;
+	 text-align: center;
+	 width:100% !important 
+}
+ .select_wrapper .select_inner {
+	 background: #fff;
+	 border-radius: 5px;
+	 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	 color: #687278;
+	 display: none;
+	 position: absolute;
+	 left: 0;
+	 top: -100%;
+	 width: 100%;
+	 z-index: 3;
+}
+ .select_wrapper .select_inner li {
+	 border-bottom: 1px solid #64993E;
+	 padding: 0 15px;
+	 font-size: 20px;
+	 font-weight: 700 
+}
+ .select_wrapper .select_inner li:hover {
+	 background: #64993E;
+	 color:white 
+}
+ .select_wrapper .select_inner li:last-child {
+	 border: none;
+	 border-radius: 0 0 5px 5px;
+}
+ .select_wrapper .select_inner li:first-child {
+	 border-radius: 5px 5px 0 0;
+}
+/*------------------------------------- ---Input qté nombre d'angles */
+
+
+ .modal-header{
+	 border-bottom: none 
+}
+ .modal-footer{
+	 border-top:none 
+}
+ .modal-header .close {
+	 margin-top: -33px;
+}
+
+ select#couleurs {
+	 font-weight: 700;
+	 font-size: 20px;
+	 width: 100%;
+	 text-align: center;
+	 height: 50px;
+	 color: black;
+	 border: 1px solid black;
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+
+ .box{
+	 color: #fff;
+	 padding: 20px;
+	 display: none;
+	 margin-top: 20px;
+}
+ .box2{
+	 color: #fff;
+	 padding: 20px;
+	 display: none;
+	 margin-top: 20px;
+}
+ .gris_7016{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/couleurs/7016-min.png);
+	 width: 100%;
+	 height: 70vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+}
+ .vert_6005{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/couleurs/6005-min.png);
+	 width: 100%;
+	 height: 70vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+}
+ .noir_9005{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/couleurs/9005-min.png);
+	 width: 100%;
+	 height: 70vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+}
+ .outpout_couleurs{
+	 height: 40vh 
+}
+ .choix_des_couleurs {
+	 height: 400px;
+	 background-color:white;
+	 padding: 20px;
+	 margin: auto;
+	 -webkit-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 -moz-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+}
+ select#hauteur{
+	 font-weight: 700;
+	 font-size: 20px;
+	 width: 100%;
+	 text-align: center;
+	 height: 50px;
+	 border: 1px solid white;
+	 color: black;
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+
+ .spacer-v280{
+	 display: none 
+}
+ .spacer-v580{
+	 display: none 
+}
+ .navigation {
+	 position: static;
+}
+
+/** STEP 1 BIENVENUE **/
+ #step1_bienvenue{
+	 height: 80vh;
+	 background-image:url(images/bienvenue.jpeg)!important;
+	 background-size: cover !important;
+	 background-repeat: no-repeat !important;
+	 padding: 0 !important;
+}
+ #step1_bienvenue .bienvenue_wrapper {
+	 height: 100%;
+	 width:100%;
+	 padding: 30px;
+	 height: 80%;
+}
+
+
+/** STEP 2 GAMME **/
+
+fieldset#step2_gamme {
+    min-height: 100vh;
+}
+
+
+
+
+
+ #step2_gamme img {
+	 border: 3px solid #000000;
+	 margin-bottom: 0px;
+	 width: 300px;
+	 box-sizing: border-box;
+	 transition: ease-in-out 0.4s;
+	 cursor: pointer;
+}
+
+
+#step2_gamme input[type="radio"]{
+	display: none
+}
+
+ #step2_gamme input[type="radio"]:checked + img {
+  border: 9px solid #64993E;
+}
+
+
+#step2_gamme img:hover {
+	border: 9px solid #64993E;
+}
+
+#step2_gamme input{
+ -webkit-appearance: radio;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 16px;
+  height: 16px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  background-color: rgba(255, 255, 255, 0.00784314);
+}
+
+
+
+step2_gamme .gammesuivant{
+	margin-top: 30px
+}
+
+
+ /** STEP 3 DIMENSIONS **/
+  .titres_dimensions{
+	 position: relative;
+	 z-index:2 
+}
+ .dimensions{
+	 position: relative;
+	 z-index: 1;
+	/* margin-top: -45px;
+	*/
+}
+ .dimensions_wrapper {
+	 height: 425px;
+	 padding: 10px;
+	/*margin-top: 90px;
+	*/
+	 margin-bottom: auto;
+	 -webkit-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 -moz-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 background:#64993E 
+}
+ .elements_cloture{
+	 border:1px solid #64993E;
+	 background: #64993E;
+	 padding-bottom: 10px;
+	 position: relative;
+}
+ span.etape {
+	 font-size: 2em;
+	 color: white;
+	 font-weight: 700;
+}
+ .cadre{
+	 display: inline-block;
+	 border: 1px solid white;
+	 padding: 5px;
+	 margin-right: 15px;
+}
+ #output_NbDePanneaux,#output_NbDePoteaux{
+	 color: white;
+	 font-family: Poppins;
+	 font-weight: 700;
+	 font-size: 3em;
+	 vertical-align: middle;
+}
+ input#longueur{
+	 font-size: 20px;
+	 font-weight: 700;
+	 background: white;
+	 color: black;
+	 text-align: center;
+	 border: 1px solid white;
+}
+ input#longueur::placeholder{
+	 color: black;
+	 opacity:0.4 
+}
+ input#longueur:focus{
+	 border: 1px solid white;
+}
+ .input-group-addon{
+	 background-color: white;
+	 border:1px solid white;
+	 font-weight:700 
+}
+ .element_wrapper {
+	 text-align: center;
+	 margin-top: 10px;
+}
+ h3.titre_element{
+	 color:white;
+	 font-weight: 700;
+}
+ img.element{
+	 margin-right: 20px;
+	 width:50px 
+}
+ span.elements_output{
+	 color:white;
+	 margin-left:5px;
+	 position: relative;
+	 top: 7px;
+	 font-size: 1.3em;
+	 font-family:Poppins 
+}
+ .row.dimensions {
+	 margin-bottom: 30px;
+}
+ .lesdimensions{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/dimensions/dim5.jpeg);
+	 background-size: cover;
+	 background-repeat:no-repeat;
+}
+ .egal {
+	 display: flex;
+	 display: -webkit-flex;
+	 flex-wrap: wrap;
+}
+ .fixed_width {
+	 width: 800px;
+}
+ .select_hauteur{
+	 width: 100%;
+	 background: #64993E;
+	 padding: 20px;
+	 border-top-left-radius: 0px;
+	 border-bottom-left-radius: 0px;
+	 border-top-right-radius: 0px;
+	 border-bottom-right-radius: 0px;
+	 margin-left: auto 
+}
+ li {
+	 color: black;
+	 opacity: 0.8;
+}
+ .select_longueur{
+	 width: 100%;
+	 background: #64993E;
+	 padding: 20px;
+	 border-top-left-radius:0px;
+	 border-bottom-left-radius:0px;
+	 border-top-right-radius:0px;
+	 border-bottom-right-radius:0px;
+	 margin-left: auto 
+}
+
+ /** STEP 4 COULEURS **/
+ 
+#step4_couleurs{
+	 background-image: url("https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/pelouseOptions-min.jpg");
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 height: 80vh;
+}
+#step4_couleurs h2{
+	 color:#264653 !important 
+}
+#step4_couleurs h3{
+	 color:#264653 
+}
+
+
+
+
+/**
+.couleurral7016{ 
+		background-image: url(images/couleurs/7016-min.png);
+		width: 100%;
+		height: 70vh;
+		background-size: cover;
+		background-position: center center;
+		position: absolute;
+    }
+    
+    
+    /**
+    
+   .couleurral6005{
+	  background-image: url(images/couleurs/6005-min.png);
+		width: 100%;
+		height: 70vh;
+		background-size: cover;
+		background-position: center center;
+		position: absolute;  
+    }
+    
+     .couleurral9005{
+	  background-image: url(images/couleurs/9005-min.png);
+		width: 100%;
+		height: 70vh;
+		background-size: cover;
+		background-position: center center;
+		position: absolute;  
+    }
+
+
+
+
+ /** STEP 5 TYPE DE POSE **/
+
+#step5_typeDePose{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/pelouseOptions-min.jpg);
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 height: 80vh;
+}
+
+#step5_typeDePose select#pose {
+	 font-weight: 700;
+	 font-size: 20px;
+	 width: 100%;
+	 text-align: center;
+	 height: 50px;
+	 color: black;
+	 border: 1px solid black;
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+#step5_typeDePose .param_pose{
+	 height: 435px;
+	 background-color:#ffffff;
+	 padding: 20px;
+	 margin: auto;
+	 -webkit-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 -moz-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+}
+
+
+img.sceller.box, img.platine.box {
+    width: 80%;
+}
+
+
+/**
+#step5_typeDePose .platine{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/pose/platinepng-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 margin-top:0px 
+}
+#step5_typeDePose .sceller{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/pose/ascellerpng-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 margin-top:0px 
+}
+**/
+
+ button#a_sceller{
+	 background-image:url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/pose/sceller.jpg);
+	 background:cover;
+	 background-repeat: no-repeat;
+	 padding: 0px;
+	 border: 3px solid #000000;
+	 border-radius: 0px;
+	 margin-bottom: 10px;
+	 width: 100%;
+	 box-sizing: border-box;
+	 font-family: Poppins;
+	 font-size: 13px;
+	 width: 440px;
+	 height:440px;
+}
+ button#sur_platine{
+	 background-image:url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/pose/pose2.jpg);
+	 background:cover;
+	 background-repeat: no-repeat;
+	 padding: 0px;
+	 border: 3px solid #000000;
+	 border-radius: 0px;
+	 margin-bottom: 10px;
+	 width: 100%;
+	 box-sizing: border-box;
+	 font-family: Poppins;
+	 font-size: 13px;
+	 width: 440px;
+	 height:440px;
+}
+
+ #quantity {
+	 display: inline-block;
+	 position: relative;
+}
+ #quantity input[type=number]::-webkit-inner-spin-button, #quantity input[type=number]::-webkit-outer-spin-button {
+	 -webkit-appearance: none;
+	 margin: 0;
+}
+#quantity input[type=number] {
+	 -moz-appearance: textfield;
+}
+#quantity input {
+	 background: transparent;
+	 border: 0;
+	 border-bottom-style: solid;
+	 border-bottom-width: 1px;
+	 border-color: black;
+	 box-sizing: border-box;
+	 height: 42px;
+	 margin: 0;
+	 margin-right: 8px;
+	 text-align: center;
+	 transition: border-color 200ms ease-in;
+	 width: 50px;
+}
+#quantity input:focus {
+	 border-color: #fff7e3;
+	 outline: 0;
+	 transition: border-color 200ms ease-out;
+}
+
+
+span.etapepose {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+
+#quantity .quantity-button {
+	 background: transparent;
+	 box-sizing: border-box;
+	 border-radius: 2px;
+	 border-style: solid;
+	 border-width: 2px;
+	 border-color: #64993E;
+	 color: #2C3E50;
+	 top: -2px;
+	 cursor: pointer;
+	 display: inline-block;
+	 font-size: 23px;
+	 font-family: sans-serif;
+	 height: 42px;
+	 line-height: 1.7;
+	 margin-right: 2px;
+	 position: relative;
+	 text-align: center;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	 user-select: none;
+	 width: 45px;
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	 transition: -webkit-transform 200ms ease-in;
+	 transition: transform 200ms ease-in;
+	 transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+#quantity .quantity-button:hover, .quantity .quantity-button:focus {
+	 -webkit-transform: scale(1.05);
+	 transform: scale(1.05);
+	 transition: -webkit-transform 200ms ease-out;
+	 transition: transform 200ms ease-out;
+	 transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+#quantity .quantity-button:active {
+	 -webkit-transform: scale(0.95);
+	 transform: scale(0.95);
+	 transition: -webkit-transform 200ms ease-out;
+	 transition: transform 200ms ease-out;
+	 transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+#quantity .quantity-button.quantity-up:before {
+	 content: "+";
+}
+#quantity .quantity-button.quantity-down {
+	 margin-right: 0;
+}
+#quantity .quantity-button.quantity-down:before {
+	 bottom: 2px;
+	 content: "-";
+	 position: relative;
+}
+ .wrapper {
+	 align-items: center;
+	 display: flex;
+	 justify-content: center;
+}
+ .stripe-wrapper {
+	 overflow: hidden;
+	 max-width: 400px;
+	 margin: 0 auto;
+	 padding: 30px;
+	 position: relative;
+}
+ .stripe-wrapper #quantity {
+	 z-index: 5;
+}
+ .quantity-nav {
+	 display: inline-flex;
+}
+ input#angles{
+	 border: 2px solid #64993E;
+	 color: #64993E;
+	 font-size: 30px;
+	 font-weight: 700;
+}
+ /** STEP 6 OPTIONS **/
+  #step6_options {
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/pelouseOptions-min.jpg);
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 height: 80vh;
+}
+
+ #step6_options .param_options{
+	 height: 580px;
+	 background-color:#ffffff;
+	 padding: 20px;
+	 margin: auto;
+	 -webkit-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 -moz-box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+	 box-shadow: 18px 18px 5px 0px rgba(0,0,0,0.55);
+}
+ #step6_options span.etapepose {
+	 font-size: 2em;
+	 color: #2C3E50;
+	 font-weight: 700;
+}
+
+ #step6_options row.options{
+	 min-height: 80vh 
+}
+
+
+
+ #step6_options  select#occultation {
+	 font-weight: 700;
+	 font-size: 20px;
+	 width: 100%;
+	 text-align: center;
+	 height: 50px;
+	 color: black;
+	 background: white;
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+ #step6_options  .oui{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/avecoccultation-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 z-index:3;
+	 margin-top:-20px 
+}
+ #step6_options  .non{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/sansoccultation-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 z-index:3;
+	 margin-top:-20px 
+}
+ #step6_options  select#soubassement{
+	 font-weight: 700;
+	 font-size: 20px;
+	 width: 100%;
+	 text-align: center;
+	 height: 50px;
+	 color: black;
+	 background: white;
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+ #step6_options  .s25cm{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/soub25-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 z-index:4;
+	 margin-top:-20px 
+}
+ #step6_options  .s50cm{
+	 background-image: url(https://greencloture.fr/wp-content/themes/urna-child/assets_configurateur/images/options/soub50-min.png);
+	 width: 100%;
+	 height: 80vh;
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 z-index:4;
+	 margin-top:-20px 
+}
+
+
+/*STEP 6-5 EXPEDITION*/
+fieldset#step6-5_expedition {
+    padding: 40px;
+}
+
+#step6-5_expedition input[type="radio"]{
+	display: none
+}
+
+ #step6-5_expedition input[type="radio"]:checked + img {
+  border: 9px solid #64993E;
+}
+
+#step6-5_expedition img {
+	border: 9px solid transparent;
+	transition: ease-in 0.4s
+}
+
+
+#step6-5_expedition img:hover {
+	border: 9px solid #64993E;
+}
+
+
+ /** STEP 7 RECAP **/
+ 
+ #step7_recap {
+	 background-image: url(images/bienvenue.jpeg)!important;
+	 background-size: cover !important;
+	 background-repeat: no-repeat !important;
+	 padding: 0 !important;
+ }
+ 
+ 
+ td.designation {
+    vertical-align: middle;
+}
+ 
+ 
+ 
+
+ 
+ 
+ @media (max-width:767px){
+	 
+	 .hidden_mobile{
+		 display: none
+	 }
+	 
+	 
+	 #progressbar{
+		 padding-left:0 !important
+	 }
+	 #progressbar li{
+		 font-size:5px
+	 }
+	  /*Step 1*/
+	 
+	 .page-id-7461 body.admin-bar .wrapper-container{
+		 padding-top:0 !important
+	 }
+	 
+	 
+	 
+	 #step1_bienvenue .bienvenue_wrapper {
+	 height:70%
+	}
+	 
+	 .logo_wrapper{
+		 max-width: 70%
+	 }
+	 h1.titre{
+		 font-size:23px
+	 }
+	 /*Step 2*/
+	 
+	 
+	 #step2_gamme img {
+	width: 70%
+	}
+	
+	
+	step2_gamme.gammesuivant{
+	margin-top: 0px 
+}
+
+	
+	
+	
+	/*Step 3*/
+	
+	select#hauteur{
+		color:#404040
+	}
+	
+	.elements_cloture{
+		display: none
+	}
+	
+	input#longueur,select#hauteur{
+		background: white;
+		color:#4a4545
+	}
+	
+	input#longueur::placeholder{
+		color:#4a4545;
+		opacity:0.6
+	}
+	
+	
+	
+	/*Step 4*/
+	
+	
+	.choix_des_couleurs{
+		padding:10px
+	}
+	
+	#step4_couleurs h2{
+		font-size:25px
+	}
+	
+	select#couleurs{
+		background: white;
+		color:#4a4545;
+		height: 40px;
+		font-size: 16px
+	}
+	
+	select#couleurs:focus{
+		outline: none
+	}
+	
+	
+	
+	.choix_des_couleurs{
+		height:230px
+	}
+	
+	/**
+	.couleurral6005,.couleurral9005,.couleurral7016{
+		height:44vh
+	}
+	**/
+	
+	.box{
+		padding:0 
+	}
+	
+	
+	/*Step 5*/
+	#step5_typeDePose h2.fs-title{
+		font-size:26px;
+		margin-top: 0px;
+	}
+	
+	#step5_typeDePose select#pose{
+		width:70%;
+		font-size: 20px;
+		height: 35px;
+		background: white;
+		color:#4a4545
+	}
+	
+	input#angles{
+		color:#4a4545;
+		font-size: 25px;
+	}
+	
+	img.sceller.box, img.platine.box {
+    width: 100%;
+}
+
+	
+	
+	
+	span.etapepose {
+    font-size: 1.1em;
+    font-weight: 700;
+	}
+	
+	
+	#step5_typeDePose .param_pose{
+		height:215px
+	}
+	
+	.stripe-wrapper {
+	padding: 10px;
+	}
+	
+	#step5_typeDePose label{
+		font-size:15px
+	}
+	
+	
+	
+	/**
+	#step5_typeDePose .sceller{
+	max-width: 100%;
+    position: absolute;
+    height: 250px;
+    top: 52px;
+	}
+	
+	#step5_typeDePose .platine{
+	max-width: 100%;
+    position: absolute;
+    height: 250px;
+    top: 52px;
+	}
+	**/
+	
+	
+	/*Step 6*/
+	#step6_options{
+		height: 100vh
+	}
+	
+	#step6_options .param_options {
+	height:220px
+	}
+	
+	fieldset#step6_options .fs-title{
+		font-size:20px;
+		margin-top: 0px;
+	}
+	
+	#step6_options span.etapepose {
+    font-size: 1.3em;
+    color: black;
+    font-weight: 700;
+	}
+	
+	#step6_options select#occultation,#step6_options select#soubassement{
+		font-size: 16px;
+		height:40px;
+		margin-bottom: 5px
+	}
+	
+	#step6_options label{
+		font-size: 12px
+	}
+	
+	#step6_options .oui,#step6_options .non,#step6_options .soub25,#step6_options .soub50{
+		height:60vh
+	}
+	
+	.spacer-v580{
+		display: block;
+		height: 240px
+	}
+	
+	
+	
+	/*step 7*/
+	fieldset#step7_recap{
+		background: white;
+		background-image: none !important
+	}
+	
+	
+	fieldset#step7_recap .fs-title{
+		font-size:25px;
+		color:#4a4545 !important
+	}
+	
+	
+	.action_mobile {
+    padding-top: 20px;
+}
+
+	.tg td{
+	font-size: 10px
+	}
+	
+	.tg th {
+		font-size: 10px
+	}
+	
+	h3#exampleModalCenterTitle {
+    font-size: 17px;
+    text-align: center;
+}
+
+spacer-v80mobile{
+	height:80vh;
+	display: block
+}
+	
+	
+ }/*Fin média query*/
