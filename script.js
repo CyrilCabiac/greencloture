@@ -87,10 +87,7 @@ jQuery(document).ready(function() {
 					
 				let colors = Object.keys(PRODUITS.PANNEAU[d.gamme][d.hauteur])
 				
-				form.couleur.innerHTML = colors.map(function(c) {
-					return '<option value="couleurral' + c + '">' + c + '</option>'
-				}).join('\n')
-				
+								
 				majImage(form.couleur)
 			break;
 			case 'step4_couleurs':
